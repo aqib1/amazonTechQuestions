@@ -5,11 +5,12 @@ public class NextGreaterNumberFromArray {
 	// Time complexity in worst case is O(n)
 	static void optimizeSolutionUsingStack(int[] arr) {
 		Stack<Integer> stack = new Stack<>();
+		// push first element in the stack
 		stack.push(arr[0]);
 		for (int x = 1; x < arr.length; x++) {
 			int pushedVal = stack.pop();
 			while (arr[x] > pushedVal) {
-				System.out.println("Next Greater val of " + pushedVal + " is " + arr[x]);
+				System.out.println("Next Greater number of " + pushedVal + " is " + arr[x]);
 				if (stack.isEmpty())
 					break;
 				pushedVal = stack.pop();
@@ -19,10 +20,32 @@ public class NextGreaterNumberFromArray {
 			}
 			stack.push(arr[x]);
 		}
-		while (!stack.isEmpty()) {
-			System.out.println("Next Greater val of " + stack.pop() + " is -1");
-		}
+		
+		while(!stack.isEmpty())
+			System.out.println("Next Greater number "+ stack.pop()+" is -1");
+		
+		
+		
+		
 
+		// Stack<Integer> stack = new Stack<>();
+		// stack.push(arr[0]);
+		// for (int x = 1; x < arr.length; x++) {
+		// int pushedVal = stack.pop();
+		// while (arr[x] > pushedVal) {
+		// System.out.println("Next Greater val of " + pushedVal + " is " + arr[x]);
+		// if (stack.isEmpty())
+		// break;
+		// pushedVal = stack.pop();
+		// }
+		// if (pushedVal > arr[x]) {
+		// stack.push(pushedVal);
+		// }
+		// stack.push(arr[x]);
+		// }
+		// while (!stack.isEmpty()) {
+		// System.out.println("Next Greater val of " + stack.pop() + " is -1");
+		// }
 	}
 
 	// Time complexity in worst case O(m)^2

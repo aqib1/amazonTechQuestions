@@ -6,6 +6,7 @@ public class Max1RowFinder {
 		HashMap<Integer, Integer> map = new HashMap<>();
 		for (int x = 0; x < data.length; x++) {
 			for (int y = 0; y < data[x].length; y++) {
+				
 				if (data[x][y] == 1) {
 					if (map.containsKey(x)) {
 						map.put(x, map.get(x) + 1);
