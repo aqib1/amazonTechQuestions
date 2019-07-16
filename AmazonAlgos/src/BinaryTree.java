@@ -165,8 +165,8 @@ public class BinaryTree {
 		bt.add(10, "afzal");
 		bt.add(11, "shj");
 		bt.add(9, "jhwl");
-		// bt.traversal(TraversalApproches.POST_ORDER);
-		System.out.println(bt.findByKey(99));
+		 bt.traversal(TraversalApproches.POST_ORDER);
+//		System.out.println(bt.findByKey(99));
 		// System.out.println(bt);
 	}
 }
